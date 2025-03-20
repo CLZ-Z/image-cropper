@@ -1,0 +1,19 @@
+<view class="image-cropper-container">
+	<view class="image-cropper" style="height:{{cropperHeight}}px;">
+		<view class="image-wrapper" style="width:{{imageWidth}}px;height:{{imageHeight}}px;left:{{imageLeft}}px;top:{{imageTop}}px;">
+			<image class="target-image" style="width:{{imageWidth}}px;height:{{imageHeight}}px;" src="{{imageSrc}}">
+			</image>
+		</view>
+		<view class="cropper-frame" bindtouchstart="touchStart" catch:touchmove="touchMove" bindtouchend="touchEnd" style="height:{{cropperHeight}}px;">
+		</view>
+		<view class="cropper_circular" wx:if="{{CropType == 1}}" style="height:{{150}}px; left:{{CropframeLeft}}px;top:{{CropframeTop}}px;" bindtouchstart="touchStartcircular" catch:touchmove="touchMoveCircular" bindtouchend="touchEnd"></view>
+	</view>
+</view>
+<view class="controls">
+	<view class="btn1" bindtap="cancel">取消</view>
+	<view class="btn2" bind:tap="cropImage">完成</view>
+</view>
+<!-- <image wx:if="{{CropType == 0}}" src="{{path}}" style="width: {{cropperWidth}}px;height:{{cropperHeight}}px;" class="ph" mode="" />
+
+<image wx:if="{{CropType == 1}}" src="{{path}}" style="width: {{300}}rpx;height:{{300}}rpx;border-radius: 100%;" mode="" /> -->
+<canvas type="" style="width: 100%;height:{{cropperHeight}}px;" class="cropperCanvas" id="cropperCanvas" canvas-id="cropperCanvas" />

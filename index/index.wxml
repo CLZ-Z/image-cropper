@@ -1,0 +1,6 @@
+<!-- 生成好的图片 -->
+<!-- <image wx:if="{{CropType == 0}}" src="{{path}}" style="width: {{cropperWidth}}px;height:{{cropperHeight}}px;" class="ph" mode="" />
+
+<image wx:if="{{CropType == 1}}" src="{{path}}" style="width: {{300}}rpx;height:{{300}}rpx;border-radius: 100%;" mode="" /> -->
+<!-- <canvas type="" style="width: 100%;height:{{cropperHeight}}px;" id="cropperCanvas" canvas-id="cropperCanvas" /> -->
+<imageCropper wx:if="{{cjtp}}" maxscale="{{scale}}" imgUrl="{{imgUrl}}" bind:cropped="cropped" CropType="{{CropType}}"></imageCropper>
